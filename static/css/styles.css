@@ -1,0 +1,87 @@
+:root {
+  --primary-color: #00ffff;
+  --bg-dark: #1a1a2e;
+  --bg-darker: #16213e;
+  --text-light: #e2e2e2;
+  --portal-border: rgba(0, 255, 255, 0.2);
+  --portal-bg: rgba(0, 0, 0, 0.2);
+  --portal-bg-hover: rgba(0, 0, 0, 0.4);
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.portal {
+  background: var(--portal-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--portal-border);
+  transition: all 0.3s ease;
+}
+
+.portal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+  background: var(--portal-bg-hover);
+}
+
+.portal h3 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.btn {
+  background: var(--primary-color);
+  color: var(--bg-dark);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: #00cccc;
+  transform: scale(1.05);
+}
