@@ -1,25 +1,35 @@
-# XUVE Token Smart Contracts
+# XUVE Token Contracts
 
-This directory contains the Solidity smart contracts for the XUVE token ecosystem.
+This directory contains the smart contracts for the XUVE token and related functionality.
 
-## XuveToken.sol
+## Token Details
 
-The main ERC-20 token contract with the following features:
-- 80 million total supply
-- Mintable and burnable
-- Pausable for emergency situations
-- Vesting schedules for team and investor allocations
-- Token distribution:
-  - 20% Team allocation (16M tokens)
-  - 15% Reserve allocation (12M tokens) 
-  - 30% Ecosystem allocation (24M tokens)
-  - 20% Presale allocation (16M tokens)
-  - 15% Staking allocation (12M tokens)
+- **Name**: XUVE Token
+- **Symbol**: XUVE
+- **Decimals**: 18
+- **Total Supply**: 80,000,000 XUVE
+
+## Contract Structure
+
+- `XUVEToken.sol`: The main ERC-20 token contract with vesting functionality
+- Other contracts will be added as needed
 
 ## Deployment
 
-The token is deployed on the Polygon network. See the `scripts/deploy_token.js` file for deployment instructions.
+The token is deployed on the Polygon network. To deploy to a local development environment or testnet:
+
+```
+npx hardhat run scripts/deploy_token.js --network <network-name>
+```
+
+## Testing
+
+Run tests with:
+
+```
+npx hardhat test
+```
 
 ## Security
 
-All contracts use OpenZeppelin's battle-tested contract libraries and follow security best practices.
+The XUVE token contract uses OpenZeppelin's audited and battle-tested contracts as a base, enhancing security and reducing the risk of vulnerabilities.

@@ -1,31 +1,35 @@
-// This script deploys the XUVE token to the Polygon network
+// Script to deploy the XUVE Token contract
 
-const hre = require("hardhat");
+const { ethers } = require("hardhat");
 
 async function main() {
-  // Deploy the XUVE token contract
-  const XuveToken = await hre.ethers.getContractFactory("XuveToken");
-  console.log("Deploying XUVE Token...");
-  const token = await XuveToken.deploy();
+  console.log("Deploying XUVE Token contract...");
+
+  // Get the contract factory
+  const XUVEToken = await ethers.getContractFactory("XUVEToken");
+  
+  // Get signers
+  const [deployer] = await ethers.getSigners();
+  
+  // For development, we'll use the deployer as all the wallets
+  // In production, you would use different addresses
+  const teamWallet = deployer.address;
+  const treasuryWallet = deployer.address;
+  const reserveWallet = deployer.address;
+  const presaleWallet = deployer.address;
+  
+  // Deploy the token contract
+  const token = await XUVEToken.deploy(
+    teamWallet,
+    treasuryWallet,
+    reserveWallet,
+    presaleWallet
+  );
+  
   await token.deployed();
   
   console.log("XUVE Token deployed to:", token.address);
-  
-  // Wait for a few block confirmations to ensure the contract is confirmed
-  console.log("Waiting for block confirmations...");
-  await token.deployTransaction.wait(5);
-  
-  // Verify the contract on Polygonscan
-  console.log("Verifying contract on Polygonscan...");
-  try {
-    await hre.run("verify:verify", {
-      address: token.address,
-      constructorArguments: [],
-    });
-    console.log("Contract verified on Polygonscan");
-  } catch (error) {
-    console.error("Error verifying contract:", error);
-  }
+  console.log("Total supply:", await token.totalSupply());
 }
 
 main()
