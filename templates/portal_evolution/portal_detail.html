@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}{{ portal.display_name }} - LUMAURA x XUVE{% endblock %}
+
+{% block content %}
+<section class="portal-detail">
+    <div class="portal-header">
+        <div class="portal-visualization">
+            <div class="portal-hologram large" data-portal="{{ portal.name }}"></div>
+        </div>
+        <div class="portal-header-info">
+            <h1>{{ portal.display_name }}</h1>
+            <div class="evolution-progress large">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: {{ portal.evolution_score }}%;"></div>
+                </div>
+                <div class="evolution-stats">
+                    <div class="evolution-score">Evolution Score: {{ portal.evolution_score }}</div>
+                    <div class="evolution-stage">Stage: {{ portal.evolution_stage }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="portal-content">
+        <div class="portal-section">
+            <h2>Capabilities</h2>
+            <div class="capabilities-grid">
+                {% for capability, enabled in portal.capabilities.items() %}
+                <div class="capability-card {% if enabled %}enabled{% else %}disabled{% endif %}">
+                    <div class="capability-icon"></div>
+                    <div class="capability-name">{{ capability|replace('_', ' ')|title }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="portal-section">
+            <h2>Recommendations</h2>
+            {% if recommendations %}
+            <div class="recommendations-list">
+                {% for rec in recommendations %}
+                {% if rec.status == 'pending' %}
+                <div class="recommendation-card" data-id="{{ rec.id }}">
+                    <div class="recommendation-header">
+                        <div class="recommendation-type">{{ rec.type }}</div>
+                        <div class="recommendation-source">From: {{ rec.source_portal }}</div>
+                    </div>
+                    <div class="recommendation-details">
+                        {{ rec.details }}
+                    </div>
+                    <div class="recommendation-actions">
+                        <button class="btn primary implement-btn" data-id="{{ rec.id }}">Implement</button>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% else %}
+            <p class="no-recommendations">No pending recommendations for this portal.</p>
+            {% endif %}
+        </div>
+        
+        <div class="portal-section">
+            <h2>Activity History</h2>
+            <div class="activity-timeline">
+                <div class="activity-entry">
+                    <div class="activity-time">{{ portal.last_activity.timestamp }}</div>
+                    <div class="activity-description">{{ portal.last_activity.description }}</div>
+                </div>
+                <!-- Additional activity entries would be shown here -->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/portal_system/holographic-ui.js') }}"></script>
+<script src="{{ url_for('static', filename='js/portal_system/particle-system.js') }}"></script>
+<script src="{{ url_for('static', filename='js/portal_system/portal-interactions.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize portal hologram
+        const portalElement = document.querySelector('.portal-hologram');
+        const portalName = portalElement.getAttribute('data-portal');
+        initPortalHologram(portalElement, portalName, true);  // true for detailed view
+        
+        // Handle recommendation implementation
+        document.querySelectorAll('.implement-btn').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const recId = this.getAttribute('data-id');
+                implementRecommendation(recId);
+            });
+        });
+        
+        function implementRecommendation(recId) {
+            fetch('/api/portal-evolution/implement-recommendation', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    recommendation_id: recId
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    // Remove the implemented recommendation card
+                    const recCard = document.querySelector(`.recommendation-card[data-id="${recId}"]`);
+                    if (recCard) {
+                        recCard.classList.add('implemented');
+                        setTimeout(() => {
+                            recCard.remove();
+                        }, 1000);
+                    }
+                    
+                    // Update the evolution score and capabilities
+                    // In a real app, we'd reload the data or update the UI
+                    alert('Recommendation implemented successfully! Refresh to see updates.');
+                } else {
+                    alert('Error implementing recommendation: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error implementing recommendation:', error);
+                alert('Error implementing recommendation');
+            });
+        }
+    });
+</script>
+{% endblock %}

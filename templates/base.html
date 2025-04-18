@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LUMAURA x XUVE{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">LUMAURA x XUVE</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/portal-evolution">Portals</a></li>
+                <li><a href="/collaboration">Collaboration</a></li>
+                <li><a href="/ai">AI</a></li>
+                {% if is_xuvevision_available %}
+                <li><a href="/xuvevision">XuveVision</a></li>
+                {% endif %}
+                {% if is_xuvecode_available %}
+                <li><a href="/xuvecode">XuveCode</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; {% now 'Y' %} LUMAURA x XUVE. All rights reserved.</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

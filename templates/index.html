@@ -1,44 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LUMAURA x XUVE</title>
-  <link rel="stylesheet" href="/static/css/styles.css">
-</head>
-<body>
-  <div class="container">
-    <h1>LUMAURA x XUVE</h1>
-    <p>An advanced ecosystem with holographic AI portals and blockchain integration</p>
-    
-    <div class="portal-grid">
-      <div class="portal">
-        <h3>XuveTeam</h3>
-      </div>
-      <div class="portal">
-        <h3>XuveCode</h3>
-      </div>
-      <div class="portal">
-        <h3>XuveVision</h3>
-      </div>
-      <div class="portal">
-        <h3>XuveBank</h3>
-      </div>
-      <div class="portal">
-        <h3>XuveOps</h3>
-      </div>
-      <div class="portal">
-        <h3>XuveLegal</h3>
-      </div>
-      <div class="portal">
-        <h3>XuveHome</h3>
-      </div>
-      <div class="portal">
-        <h3>XuveFleet</h3>
-      </div>
+{% extends "base.html" %}
+
+{% block title %}LUMAURA x XUVE - Holographic AI Portal Evolution Ecosystem{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to LUMAURA x XUVE</h1>
+        <p>A holographic AI portal evolution ecosystem with intelligent collaboration tools and adaptive workspace management.</p>
+        <div class="hero-buttons">
+            <a href="/portal-evolution" class="btn primary">Explore Portals</a>
+            <a href="/collaboration" class="btn secondary">Collaborate</a>
+        </div>
     </div>
-  </div>
-  
-  <script src="/static/js/app.js"></script>
-</body>
-</html>
+    <div class="hero-visual">
+        <div class="holographic-container" id="hero-hologram">
+            <!-- Holographic visualization will be rendered here by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <h2>Core Components</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon portal-icon"></div>
+            <h3>Portal Evolution System</h3>
+            <p>25+ specialized AI portals that evolve through usage and collaboration.</p>
+            <a href="/portal-evolution" class="feature-link">Learn More</a>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon ai-icon"></div>
+            <h3>AI Integration</h3>
+            <p>Advanced AI capabilities powered by OpenAI and Anthropic models.</p>
+            <a href="/ai" class="feature-link">Learn More</a>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon collab-icon"></div>
+            <h3>Collaboration Tools</h3>
+            <p>Intelligent workspace management and team collaboration features.</p>
+            <a href="/collaboration" class="feature-link">Learn More</a>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon blockchain-icon"></div>
+            <h3>Blockchain Integration</h3>
+            <p>XUVE token management and financial operations on the Polygon network.</p>
+            <a href="#" class="feature-link">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<section class="portal-showcase">
+    <h2>Featured Portals</h2>
+    <div class="portal-cards">
+        <div class="portal-card">
+            <div class="portal-hologram" data-portal="xuvebanker"></div>
+            <h3>Xuvebanker</h3>
+            <p>Financial operations portal for managing transactions and funds.</p>
+        </div>
+        <div class="portal-card">
+            <div class="portal-hologram" data-portal="xuveteam"></div>
+            <h3>Xuveteam</h3>
+            <p>Team collaboration portal for managing projects and resources.</p>
+        </div>
+        <div class="portal-card">
+            <div class="portal-hologram" data-portal="xuvemark"></div>
+            <h3>Xuvemark</h3>
+            <p>Marketing intelligence portal for campaign optimization.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/portal_system/holographic-ui.js') }}"></script>
+<script src="{{ url_for('static', filename='js/portal_system/particle-system.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize holographic UI elements
+        initHolographicUI('#hero-hologram');
+        
+        // Initialize portal holograms
+        document.querySelectorAll('.portal-hologram').forEach(function(element) {
+            const portalName = element.getAttribute('data-portal');
+            initPortalHologram(element, portalName);
+        });
+    });
+</script>
+{% endblock %}

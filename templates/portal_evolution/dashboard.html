@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Portal Evolution Dashboard - LUMAURA x XUVE{% endblock %}
+
+{% block content %}
+<section class="portal-dashboard">
+    <h1>Portal Evolution Dashboard</h1>
+    <p>Monitor and manage the evolution of AI portals in the LUMAURA x XUVE ecosystem.</p>
+    
+    <div class="portal-grid">
+        {% for name, portal in portals.items() %}
+        <div class="portal-card" data-name="{{ name }}">
+            <div class="portal-hologram" data-portal="{{ name }}"></div>
+            <div class="portal-info">
+                <h3>{{ portal.display_name }}</h3>
+                <div class="evolution-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {{ portal.evolution_score }}%;"></div>
+                    </div>
+                    <div class="evolution-stage">{{ portal.evolution_stage }}</div>
+                </div>
+                <div class="portal-capabilities">
+                    <h4>Capabilities</h4>
+                    <ul>
+                        {% for capability, enabled in portal.capabilities.items() %}
+                        {% if enabled %}
+                        <li>{{ capability|replace('_', ' ')|title }}</li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                <a href="/portal-evolution/portal/{{ name }}" class="btn secondary">View Details</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/portal_system/holographic-ui.js') }}"></script>
+<script src="{{ url_for('static', filename='js/portal_system/particle-system.js') }}"></script>
+<script src="{{ url_for('static', filename='js/portal_system/portal-interactions.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize portal holograms
+        document.querySelectorAll('.portal-hologram').forEach(function(element) {
+            const portalName = element.getAttribute('data-portal');
+            initPortalHologram(element, portalName);
+        });
+    });
+</script>
+{% endblock %}
