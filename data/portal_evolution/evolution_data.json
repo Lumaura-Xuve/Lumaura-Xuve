@@ -1,20 +1,20 @@
 {
   "portals": {
     "xuvebanker": {
-      "evolution_score": 0.2,
+      "evolution_score": 1.2,
       "evolution_stage": "Basic",
-      "last_updated": "2025-04-20T02:55:43.921986"
+      "last_updated": "2025-04-20T02:57:28.415211"
     },
     "xuvemark": {
-      "evolution_score": 0,
+      "evolution_score": 0.8999999999999999,
       "evolution_stage": "Basic",
-      "last_updated": "2025-04-20T02:55:43.921994"
+      "last_updated": "2025-04-20T02:57:28.415216"
     },
     "xuveteam": {
-      "evolution_score": 0.1,
+      "evolution_score": 1.5000000000000002,
       "evolution_stage": "Basic",
-      "last_updated": "2025-04-20T02:55:43.921997"
+      "last_updated": "2025-04-20T02:57:28.415219"
     }
   },
-  "last_saved": "2025-04-20T02:55:43.921998"
+  "last_saved": "2025-04-20T02:57:28.415220"
 }
