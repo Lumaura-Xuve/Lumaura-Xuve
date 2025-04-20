@@ -1,0 +1,25 @@
+{
+  "id": "SEEDCAD-B48C2503",
+  "type": "SEED_TO_CAD_BRIDGE",
+  "timestamp": "2025-04-11T22:19:04.394599",
+  "xuve_amount": 200000,
+  "usdc_amount": 130000.0,
+  "cad_amount": 175500.0,
+  "conversion_rate": {
+    "xuve_to_usdc": 0.65,
+    "usdc_to_cad": 1.35,
+    "effective_rate": 0.8775000000000001
+  },
+  "prefunded_pool": {
+    "starting_balance": 324500.0,
+    "amount_debited": 175500.0,
+    "remaining_balance": 149000.0
+  },
+  "recipient": {
+    "account_type": "business",
+    "institution": 621,
+    "transit": 16001,
+    "account": "200116809267"
+  },
+  "status": "completed"
+}

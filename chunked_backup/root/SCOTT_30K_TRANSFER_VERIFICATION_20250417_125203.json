@@ -1,0 +1,44 @@
+{
+  "transfer_id": "DIRECT-6e88a404",
+  "amount": "$30,000.00 CAD",
+  "recipient": "Scott Alvin Bowkett",
+  "account": "200116807862",
+  "execution_date": "2025-04-14 11:46:06",
+  "business_days_since_execution": 3,
+  "likely_status": "completed",
+  "confidence": "medium-high",
+  "explanation": [
+    "Wise API returned unknown status with error: Failed to get transfer status: 404",
+    "Based on 3 business days since execution (more than the typical 1-3 day transfer time)",
+    "Multiple evidence items (8) support this transfer was executed"
+  ],
+  "evidence_count": 8,
+  "evidence": {
+    "transfer_id": "DIRECT-6e88a404",
+    "transaction_id": "1ab05a2c-9721-40fa-81a5-affe589a85fc",
+    "amount": 30000.0,
+    "currency": "CAD",
+    "recipient": "Scott Alvin Bowkett",
+    "account": "200116807862",
+    "execution_date": "2025-04-14 11:46:06",
+    "status_files": [
+      "wise_transfer_status/transfer_DIRECT-6e88a404_20250416_101714.json",
+      "wise_transfer_status/transfer_DIRECT-6e88a404_20250416_101856.json",
+      "wise_transfer_status/transfer_DIRECT-6e88a404_20250416_102024.json",
+      "wise_transfer_status/transfer_DIRECT-6e88a404_20250417_124055.json"
+    ],
+    "report_files": [
+      "DIRECT_CAD_TRANSFER_REPORT_20250414_114606.md"
+    ],
+    "direct_files": [
+      "direct_transfers/DIRECT_TRANSFER_20250414_114606.json"
+    ],
+    "deposit_files": [
+      "wise_deposits/deposit_scott_2025-04-05T182932870637.json",
+      "wise_deposits/deposit_scott_2025-04-05T182953998958.json"
+    ],
+    "verification_timestamp": "2025-04-17 12:52:03",
+    "evidence_count": 8
+  },
+  "verification_timestamp": "2025-04-17 12:52:03"
+}

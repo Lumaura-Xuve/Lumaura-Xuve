@@ -1,0 +1,10 @@
+{
+  "id": "bridge-20250411132158",
+  "status": "COMPLETED",
+  "source_tokens": 500000,
+  "source_value_cad": 500000,
+  "owner_contribution": 200000,
+  "total_cad": 700000,
+  "executed_date": "2025-04-11T13:21:58.088019",
+  "transaction_type": "DIRECT_BRIDGE"
+}

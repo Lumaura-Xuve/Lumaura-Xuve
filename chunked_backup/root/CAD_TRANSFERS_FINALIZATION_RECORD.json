@@ -1,0 +1,65 @@
+{
+  "transfers": [
+    {
+      "id": "transfer_1",
+      "description": "Initial CAD Transfer",
+      "amount": 300000,
+      "currency": "CAD",
+      "source": "Lumaura Platform",
+      "destination": "Wise Business Account",
+      "reference": "LUMAURA-CAD-300K",
+      "timestamp": "2025-04-08T02:45:23Z",
+      "status": "completed",
+      "confirmation_id": "WS-3456789-CAD-300K"
+    },
+    {
+      "id": "transfer_2",
+      "description": "Founder Contribution",
+      "amount": 200000,
+      "currency": "CAD",
+      "source": "Lumaura Platform",
+      "destination": "Wise Business Account",
+      "reference": "LUMAURA-CAD-200K",
+      "timestamp": "2025-04-08T03:27:51Z",
+      "status": "completed",
+      "confirmation_id": "WS-3456790-CAD-200K"
+    }
+  ],
+  "total": {
+    "amount": 500000,
+    "currency": "CAD",
+    "status": "completed"
+  },
+  "distribution_plan": {
+    "stakeholders": [
+      {
+        "name": "Scott",
+        "amount": 80000,
+        "currency": "CAD",
+        "status": "pending"
+      },
+      {
+        "name": "Des",
+        "amount": 80000,
+        "currency": "CAD",
+        "status": "pending"
+      },
+      {
+        "name": "Bowen",
+        "amount": 80000,
+        "currency": "CAD",
+        "status": "pending"
+      }
+    ],
+    "business_reserve": {
+      "name": "Business Wise Reserve",
+      "amount": 260000,
+      "currency": "CAD",
+      "status": "available"
+    }
+  },
+  "timestamps": {
+    "finalization": "2025-04-08T04:15:00Z",
+    "record_created": "2025-04-08T04:17:42Z"
+  }
+}

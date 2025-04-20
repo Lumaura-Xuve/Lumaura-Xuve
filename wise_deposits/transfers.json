@@ -1,0 +1,93 @@
+[
+  {
+    "id": "WISE-4d9c8b7a",
+    "source": "XUVE Treasury",
+    "recipient": "Amanda Lee",
+    "recipient_email": "amanda.lee@example.com",
+    "amount": 9500,
+    "currency": "CAD",
+    "status": "completed",
+    "timestamp": 1744998432,
+    "transfer_date": "2025-04-18",
+    "reference": "UI/UX Design Contract",
+    "payment_method": "Wise Deposit",
+    "bank_details": {
+      "bank_name": "RBC Royal Bank",
+      "account_type": "Business",
+      "masked_account": "****5791"
+    },
+    "transfer_fees": 3.50,
+    "exchange_rate": 1.0,
+    "transaction_hash": "WISE_3f9g8h7j6k5l4m3n2p",
+    "wise_transfer_id": "WT-982375619",
+    "note": "Payment for UI/UX design services"
+  },
+  {
+    "id": "WISE-2e3f4g5h",
+    "source": "XUVE Development Fund",
+    "recipient": "Daniel Kim",
+    "recipient_email": "daniel.kim@example.com",
+    "amount": 12750,
+    "currency": "CAD",
+    "status": "completed",
+    "timestamp": 1744913151,
+    "transfer_date": "2025-04-17",
+    "reference": "Backend Development",
+    "payment_method": "Wise Deposit",
+    "bank_details": {
+      "bank_name": "TD Canada Trust",
+      "account_type": "Business",
+      "masked_account": "****3698"
+    },
+    "transfer_fees": 3.50,
+    "exchange_rate": 1.0,
+    "transaction_hash": "WISE_8q9w2e3r4t5y6u7i8o",
+    "wise_transfer_id": "WT-982375620",
+    "note": "Payment for backend development sprint completion"
+  },
+  {
+    "id": "WISE-1a2b3c4d",
+    "source": "XUVE Marketing",
+    "recipient": "Olivia Wilson",
+    "recipient_email": "olivia.wilson@example.com",
+    "amount": 18250,
+    "currency": "CAD",
+    "status": "completed",
+    "timestamp": 1744837001,
+    "transfer_date": "2025-04-16",
+    "reference": "Video Production",
+    "payment_method": "Wise Deposit",
+    "bank_details": {
+      "bank_name": "Scotiabank",
+      "account_type": "Business",
+      "masked_account": "****2486"
+    },
+    "transfer_fees": 3.50,
+    "exchange_rate": 1.0,
+    "transaction_hash": "WISE_7y6t5r4e3w2q1a2s3d",
+    "wise_transfer_id": "WT-982375621",
+    "note": "Payment for promotional video production"
+  },
+  {
+    "id": "WISE-9z8y7x6w",
+    "source": "XUVE Strategic Fund",
+    "recipient": "Isaac Johnson",
+    "recipient_email": "isaac.johnson@example.com",
+    "amount": 35000,
+    "currency": "CAD",
+    "status": "pending",
+    "timestamp": 1745016343,
+    "transfer_date": "2025-04-18",
+    "reference": "Strategic Partnership",
+    "payment_method": "Wise Deposit",
+    "bank_details": {
+      "bank_name": "CIBC",
+      "account_type": "Business",
+      "masked_account": "****1357"
+    },
+    "transfer_fees": 3.50,
+    "exchange_rate": 1.0,
+    "wise_transfer_id": "WT-982375622",
+    "note": "Initial payment for strategic partnership agreement"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "DIRECT-8f4a92e1",
+    "source": "XUVE Reserve Fund",
+    "recipient": "David Chen",
+    "recipient_email": "david.chen@example.com",
+    "amount": 15000,
+    "currency": "CAD",
+    "status": "completed",
+    "timestamp": 1745001253,
+    "transfer_date": "2025-04-18",
+    "reference": "R&D Investment",
+    "payment_method": "Direct Bank Transfer",
+    "bank_details": {
+      "bank_name": "Bank of Montreal",
+      "account_type": "Business",
+      "masked_account": "****9753"
+    },
+    "transfer_fees": 0,
+    "exchange_rate": 1.0,
+    "transaction_hash": "DBTR_9a8b7c6d5e4f3g2h1i",
+    "note": "Research and development fund allocation"
+  },
+  {
+    "id": "DIRECT-7e5d3c1b",
+    "source": "XUVE Operations",
+    "recipient": "Emily Rodriguez",
+    "recipient_email": "emily.rodriguez@example.com",
+    "amount": 8250,
+    "currency": "CAD",
+    "status": "completed",
+    "timestamp": 1744916851,
+    "transfer_date": "2025-04-17",
+    "reference": "Server Infrastructure",
+    "payment_method": "Direct Bank Transfer",
+    "bank_details": {
+      "bank_name": "National Bank",
+      "account_type": "Business",
+      "masked_account": "****3456"
+    },
+    "transfer_fees": 0,
+    "exchange_rate": 1.0,
+    "transaction_hash": "DBTR_2q3w4e5r6t7y8u9i0o",
+    "note": "Payment for cloud infrastructure services"
+  },
+  {
+    "id": "DIRECT-5a9b8c7d",
+    "source": "XUVE Treasury",
+    "recipient": "Robert Martinez",
+    "recipient_email": "robert.martinez@example.com",
+    "amount": 22500,
+    "currency": "CAD",
+    "status": "completed",
+    "timestamp": 1744830451,
+    "transfer_date": "2025-04-16",
+    "reference": "Legal Services",
+    "payment_method": "Direct Bank Transfer",
+    "bank_details": {
+      "bank_name": "HSBC Canada",
+      "account_type": "Business",
+      "masked_account": "****8642"
+    },
+    "transfer_fees": 0,
+    "exchange_rate": 1.0,
+    "transaction_hash": "DBTR_1a2s3d4f5g6h7j8k9l",
+    "note": "Quarterly payment for legal services"
+  }
+]

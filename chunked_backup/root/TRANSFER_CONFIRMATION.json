@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "transfer_id": "xuve-9cd0f25c8ad742f2",
+  "quote_id": "direct-3d73aca81de248b5",
+  "amount": 700000,
+  "xuve_amount": 500000,
+  "owner_contribution": 200000,
+  "status": "COMPLETED",
+  "recipient": " 996301818",
+  "timestamp": "2025-04-11T13:11:57.141113",
+  "simulation": true
+}

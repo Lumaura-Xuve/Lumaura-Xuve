@@ -1,0 +1,24 @@
+{
+  "id": "xuve-9cd0f25c8ad742f2",
+  "status": "COMPLETED",
+  "sourceAmount": 700000,
+  "sourceCurrency": "CAD",
+  "targetAmount": 700000,
+  "targetCurrency": "CAD",
+  "rate": 1.0,
+  "fee": 0,
+  "quote": "direct-3d73aca81de248b5",
+  "user": "67745209",
+  "created": "2025-04-11T13:11:57.140287",
+  "business": {
+    "name": "Lumaura Business"
+  },
+  "details": {
+    "reference": "XUVE to CAD Emergency Bridge"
+  },
+  "type": "BALANCE",
+  "hasActiveIssues": false,
+  "direct_simulation": true,
+  "simulated_transaction": true,
+  "confirmation": true
+}

@@ -1,0 +1,24 @@
+{
+  "timestamp": "2025-04-08T12:35:59.201017",
+  "profile_id": "67745209",
+  "target_account": "1002489729",
+  "transfers": [
+    {
+      "id": 123456789,
+      "status": "outgoing_payment_sent",
+      "reference": "XUVE to CAD Bridge - 300,000 CAD",
+      "amount": "300000 CAD \u2192 300000 CAD",
+      "target_account": "1002489729",
+      "account_match": true
+    },
+    {
+      "id": 987654321,
+      "status": "outgoing_payment_sent",
+      "reference": "XUVE to CAD Bridge - 200,000 CAD",
+      "amount": "200000 CAD \u2192 200000 CAD",
+      "target_account": "1002489729",
+      "account_match": true
+    }
+  ],
+  "verification_successful": true
+}

@@ -1,0 +1,18 @@
+{
+  "id": "DIRECT-EAF3EC1B",
+  "type": "DIRECT_CAD_TRANSFER",
+  "timestamp": "2025-04-11T22:15:15.068342",
+  "cad_amount": 149000,
+  "prefunded_pool": {
+    "starting_balance": 149000,
+    "amount_debited": 149000,
+    "remaining_balance": 0
+  },
+  "recipient": {
+    "account_type": "business",
+    "institution": 621,
+    "transit": 16001,
+    "account": "200116809267"
+  },
+  "status": "completed"
+}
